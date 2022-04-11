@@ -1,4 +1,4 @@
-package br.com.lucas.api.controller;
+package br.com.lucas.rest.controller;
 
 import br.com.lucas.domain.entity.Cliente;
 import br.com.lucas.domain.repository.Clientes;
@@ -50,7 +50,7 @@ public class ClienteController {
     }
 
     @PutMapping("{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     public void update(@PathVariable Integer id,
                        @RequestBody Cliente cliente) {
         clientes
