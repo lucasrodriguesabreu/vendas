@@ -1,8 +1,7 @@
 package br.com.lucas.rest.controller;
 
-import br.com.lucas.domain.entity.Cliente;
 import br.com.lucas.domain.entity.Produto;
-import br.com.lucas.domain.repository.Produtos;
+import br.com.lucas.domain.repository.ProdutosRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -17,9 +16,9 @@ import static org.springframework.http.HttpStatus.*;
 @RequestMapping("/api/produtos")
 public class ProdutoController {
 
-    private Produtos repository;
+    private ProdutosRepository repository;
 
-    public ProdutoController(Produtos repository) {
+    public ProdutoController(ProdutosRepository repository) {
         this.repository = repository;
     }
 
